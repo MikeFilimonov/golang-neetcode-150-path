@@ -1,13 +1,11 @@
 package containsduplicate
 
-import "sort"
-
 func hasDuplicate(nums []int) bool {
 
 	if len(nums) < 2 {
 		return false
 	}
-	sort.Ints(nums)
+
 	cloneBuster := make(map[int]struct{})
 	for _, v := range nums {
 
